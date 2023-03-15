@@ -1,0 +1,71 @@
+<html><head><meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="min.css">
+</head>
+<h1>Printing an address of a variable</h1>
+<p>To print the address of a variable, we use "%p" specifier in C programming language. There are two ways to get the address of the variable:
+</p>
+<ul>
+<li>By using "address of" (&) operator</li>
+<li>By using pointer variable</li>
+</ul>
+<h3 id="header-list-menu">1) By using "address of" (&) operator</h3>
+<p>
+When we want to get the address of any variable, we can use “address of operator” (&) operator, it returns the address of the variable.
+</p>
+<textarea readonly style="height:300px";>
+#include <stdio.h>
+
+int main(void)
+{
+	// declare variables 
+	int a;
+	float b;
+	char c;
+
+	printf("Address of a: %p\n", &a);
+	printf("Address of b: %p\n", &b);
+	printf("Address of c: %p\n", &c);
+
+	return 0;
+}
+</textarea>
+<h3 id="header-list-menu">Output</h3>
+<textarea readonly style="height:80px";>
+Address of a: 0x7ffd3d518618
+Address of b: 0x7ffd3d51861c
+Address of c: 0x7ffd3d518617
+</textarea>
+<h3 id="header-list-menu">2) By using pointer variable</h3>
+<p>
+A pointer is the type of a variable that contains the address of another variable, by using the pointer; we can also get the address of another variable.
+</p>
+<textarea readonly style="height:300px";>
+#include <stdio.h>
+
+int main(void)
+{
+	// declare variables 
+	int a;
+	float b;
+	char c;
+	
+	//Declare and Initialize pointers 
+	int *ptr_a = &a;
+	float *ptr_b = &b;
+	char *ptr_c = &c;
+	
+	//Printing address by using pointers 	
+	printf("Address of a: %p\n", ptr_a);
+	printf("Address of b: %p\n", ptr_b);
+	printf("Address of c: %p\n", ptr_c);
+
+	return 0;
+}
+
+</textarea>
+<h3 id="header-list-menu">Output</h3>
+<textarea readonly style="height:80px";>
+Address of a: 0x7ffd3d518618
+Address of b: 0x7ffd3d51861c
+Address of c: 0x7ffd3d518617
+</textarea>

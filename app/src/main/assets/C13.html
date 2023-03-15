@@ -1,0 +1,145 @@
+<html><head><meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="min.css">
+</head>
+<h1>printf() examples/variations</h1>
+<p>As we know that, printf() is used to print the text and value on the output device, here some of the examples that we wrote to use the printf() in a better way or for an advance programming.
+</p>
+
+<h3 id="header-list-menu">1) Print normal text</h3>
+
+<textarea readonly style="height:30px";>
+printf ("Hello world");
+</textarea>
+
+<h3 id="header-list-menu">Output</h3>
+<textarea readonly style="height:30px";>
+Hello world
+</textarea>
+
+<h3 id="header-list-menu">2) Print text in new line</h3>
+
+<textarea readonly style="height:30px";>
+printf ("Hello world\nHow are you?");
+</textarea>
+
+<h3 id="header-list-menu">Output</h3>
+<textarea readonly style="height:60px";>
+Hello world
+How are you?
+</textarea>
+
+
+<h3 id="header-list-menu">3) Print double quote</h3>
+
+<textarea readonly style="height:30px";>
+printf("Hello \"World\", How are you?\n");
+</textarea>
+
+<h3 id="header-list-menu">Output</h3>
+<textarea readonly style="height:30px";>
+Hello "World", How are you?
+</textarea>
+
+
+<h3 id="header-list-menu">4) Print percentage sign (%)</h3>
+
+<textarea readonly style="height:30px";>
+printf ("Hey I got 84.20%% in my final exams\n");
+</textarea>
+
+<h3 id="header-list-menu">Output</h3>
+<textarea readonly style="height:30px";>
+Hey I got 84.20% in my final exams
+</textarea>
+
+<h3 id="header-list-menu">5) Print octal value</h3>
+
+<textarea readonly style="height:50px";>
+int num = 255;
+printf("num in octal format: %o\n", num);
+</textarea>
+
+<h3 id="header-list-menu">Output</h3>
+<textarea style="height:30px";>
+num in octal format: 377
+</textarea>
+
+<h3 id="header-list-menu">6) Print hexadecimal value (with lowercase alphabets)</h3>
+
+<textarea readonly style="height:50px";>
+int num = 255;
+printf ("num in hexadecimal format(lowercase) : %x\n", num);
+</textarea>
+
+<h3 id="header-list-menu">Output</h3>
+<textarea readonly style="height:30px";>
+num in hexadecimal format(lowercase) : ff
+</textarea>
+
+<h3 id="header-list-menu">7) Print hexadecimal value (with uppercase alphabets)</h3>
+
+<textarea readonly style="height:50px";>
+int num = 255;
+printf ("num in hexadecimal format(uppercase) : %X\n", num);
+</textarea>
+
+<h3 id="header-list-menu">Output</h3>
+<textarea readonly style="height:30px";>
+num in hexadecimal format(uppercase) : FF
+</textarea>
+
+<h3 id="header-list-menu">8) Print long string using \ (slash)</h3>
+
+<textarea readonly style="height:50px";>
+printf ("Hello world, how are you?\
+I love C programing language.\n");
+</textarea>
+
+<h3 id="header-list-menu">Output</h3>
+<textarea readonly style="height:30px";>
+Hello world, how are you?    I love C programing language.
+</textarea>
+
+
+<h3 id="header-list-menu">9) Print backslash (\)</h3>
+
+<textarea readonly style="height:50px";>
+printf ("The file is store at c:\\files\\word_files\n");
+</textarea>
+
+<h3 id="header-list-menu">Output</h3>
+<textarea readonly style="height:30px";>
+The file is store at c:\files\word_files
+</textarea>
+
+<h3 id="header-list-menu">Output</h3>
+<textarea readonly style="height:30px";>
+Hello world, how are you?    I love C programing language.
+</textarea>
+
+
+<h3 id="header-list-menu">10) To get total number of printed characters</h3>
+
+<textarea readonly style="height:80px";>
+int len = 0;
+len = printf ("Hello\n");
+printf ("Length: %d\n", len);
+</textarea>
+
+<h3 id="header-list-menu">Output</h3>
+<textarea readonly style="height:50px";>
+Hello
+Length: 6
+</textarea>
+
+<h3 id="header-list-menu">11) Print integer value 5 digit left padded with 0</h3>
+
+<textarea readonly style="height:50px";>
+int num = 255;
+printf ("num (padded): %05d\n", num);
+</textarea>
+
+<h3 id="header-list-menu">Output</h3>
+<textarea readonly style="height:50px";>
+num (padded): 00255
+</textarea>

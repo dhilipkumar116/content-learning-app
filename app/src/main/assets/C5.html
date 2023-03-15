@@ -1,0 +1,81 @@
+<html><head><meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="min.css">
+</head>
+<h1>Structure of a C program</h1>
+<p>Basic Structure of a C program is as follows:</p>
+
+<textarea readonly style="width:350px;height:150px";>
+ /* Comments */
+    Preprocessor Directives
+    Global Declaration ;
+    main()
+    {
+	    local declaration ;
+	    statements ;
+    }
+
+    user-defined functions
+</textarea>
+<h3 id="header-list-menu">1) Comments</h3>
+<p>
+These are optional components of any source code. These statements are used by the developer of the program or by the user, to explain the meaning of statements that are used in the program. These statements are not compiled by the compiler. Generally, comments are of two types:
+</p>
+<h3 id="header-list-menu">&nbsp;&nbsp;&nbsp;&nbsp;1) Single line comment:</h3>
+<textarea style="height:40px";>
+//text 
+</textarea>
+<h3 id="header-list-menu">&nbsp;&nbsp;&nbsp;&nbsp;2) Multi line comment:</h3>
+<textarea readonly style="height:80px";>
+ /*  text
+        more text 
+    */
+</textarea>
+<h3 id="header-list-menu">2) Preprocessor Directives:</h3>
+<p>
+These statements start with #. This statement directs the C preprocessor directive to include header files, to define the constant or to substitute the macros. These are of four types:
+</p>
+<h3 id="header-list-menu">&nbsp;&nbsp;&nbsp;&nbsp;1) #include:</h3>
+<p>To include header files
+</p>
+<textarea style="height:40px";>
+#include <stdio.h>
+</textarea>
+<h3 id="header-list-menu">&nbsp;&nbsp;&nbsp;&nbsp;2) #define:</h3>
+<p>To declare macros
+</p>
+<textarea style="height:40px";>
+#define  PI  3.14
+</textarea>
+<h3 id="header-list-menu">&nbsp;&nbsp;&nbsp;&nbsp;2) #if:</h3>
+<p>
+Conditional Statements.
+</p>
+<h3 id="header-list-menu">&nbsp;&nbsp;&nbsp;&nbsp;2) #log , #error:</h3>
+<p>
+Miscellaneous
+</p>
+
+<h3 id="header-list-menu">3) Global Declaration</h3>
+<p>
+Global variables are those variables whose value can be accessed throughout the complete program or in all functions. The declaration of a global variable is known as a global declaration. Generally, global variables are declared before the main function . The global variable does not declare in any function. These are optional statements.
+</p>
+
+<h3 id="header-list-menu">4) main() function</h3>
+<p>
+Every Program must have one main() function. There is only one main function in the complete program. Program execution starts from the main function and also end at the main function. Main Program calls User defined function or system defined function to perform a particular task. Main should be written in the small letter and does not end with a semicolon.
+</p>
+
+<h3 id="header-list-menu">5) Local Declaration</h3>
+<p>
+Local declaration statement includes the declaration of a variable and also include initialization of variable in any function. Unlike Global Variables scope of local variables is restricted to the function in which it is defined.
+</p>
+
+<h3 id="header-list-menu">6) Statements</h3>
+<p>
+These are statements which are read by compiler and computer then performs the operations that are specified in statements.
+</p>
+
+<h3 id="header-list-menu">7) User-Defined Functions</h3>
+<p>
+These are the subprogram. These are defined by the User, according to their needs. These enhance the readability and presentability & reusability of source code. These are an optional part. These function can be added to the system library for future use.
+</p>

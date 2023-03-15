@@ -1,0 +1,138 @@
+<html><head><meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="min.css">
+</head>
+<h1>Unary Operators in C</h1>
+
+<h3 id="header-list-menu">What are Unary Operators?</h3>
+<p>The operators which operates on single operand (i.e. to perform an operation through these operators, we need only one operand).
+</p>
+<h3 id="header-list-menu">List of Unary Operators in C programming language</h3>
+<p>
+Following are the unary operators in C and C++ programming language
+</p>
+<textarea readonly style="height:160px";>
+SrNo	Operators	Symbols
+1	Unary plus	+
+2	Unary minus	-
+3	Increment operator	++
+4	Decrement operato	--
+5	Address of Operator	&
+6	Size of Operator	sizeof()
+7	Dereferencing Operator	*
+8	Logical NOT	!
+9	Bitwise NOT/
+Bitwise Negation/
+One's Compliment	~
+</textarea>
+
+<h3 id="header-list-menu">1) Unary plus (+) Operator</h3>
+<p>
+This operator does not make any effect on the operand value, it just returns operands value.
+</p>
+<b>Consider the given example:</b>
+</br>
+<textarea readonly style="height:120px";>
+#include <stdio.h>
+
+int main()
+{
+	int x= +4;
+	printf("x= %d\n",x);
+	
+	return 0;	
+}
+
+</textarea>
+<p>Output</p>
+<p>x= 4</p>
+<h3 id="header-list-menu">2) Unary minus (-) Operator</h3>
+<p>
+This operator makes the value negative. It makes positive value to negative and negative value to positive.
+</p>
+<p>
+Consider the given example:
+</p>
+<textarea readonly style="height:120px";>
+#include <stdio.h>
+
+int main()
+{
+	int x=10;
+	int y=-20;
+	
+	printf("value of -x: %d\n",-x);
+	printf("value of -y: %d\n",-y);
+	
+	return 0;	
+}
+</textarea>
+<p>Output</p>
+value of -x: -10
+</br>
+value of -y: 20
+</br>
+
+<h3 id="header-list-menu">3) Increment (++) Operator</h3>
+<p>
+This operator increases the value by 1; there are two varieties of increment operator 1) pre-increment operator and 2) post-increment operator.
+</p>
+
+
+<p>
+For example: if we want to increase the value of variable x, the pre-increment operation will be written like ++x and post-increment operation will be written like x++.
+</p>
+
+<h3 id="header-list-menu">4) Decrement (--) Operator</h3>
+<p>
+This operator decreases the value by 1; there are two varieties of decrement operator 1) pre-decrement operator and 2) post-decrement operator.
+</p>
+<p>
+For example: if we want to decrease the value of variable x, the pre-decrement operation will be written like --x and post-decrement operation will be written like x--.
+</p>
+
+<h3 id="header-list-menu">5) Address of (&) Operator in C</h3>
+<p>
+This operator returns address of any variable.
+</p>
+<textarea readonly style="height:120px";>
+#include <stdio.h>
+
+int main()
+{
+	int x=10;
+	
+	printf("Value of x: %d\n",x);
+	printf("Address of x: %X\n",&x);
+	
+	return 0;
+}
+</textarea>
+
+<h3 id="header-list-menu">6) sizeof() Operator</h3>
+<p>
+This is a function like operator that returns the occupied size of any variable, object, constant etc, even this operator returns the size of any data type, literal etc.
+</p>
+
+<h3 id="header-list-menu">7) Dereferencing (*) Operator</h3>
+<p>
+This operator represents by character asterisk (*), it is used to deference the value of any pointer variable.
+</p>
+<p>
+Let suppose, there is a variable pointer variable ptr which has been initialised with the address of variable num and num holds value 10.
+</p>
+<p>
+Then, to access the value of num using ptr, we use dereferencing operator (*).
+</p>
+
+<h3 id="header-list-menu">8) Logical NOT (!) operator</h3>
+<p>
+This operator inverse the result of any expression, if expression's result is non zero it returns zero (0) and if expression's result is zero its returns 1.
+</p>
+
+<h3 id="header-list-menu">Bitwise NOT (~) Operator</h3>
+<p>
+This operators also known as Bitwise negation and one’s compliment operator in C language, it is a Unary operator in C and C++, it converts (inverse) individual bits from 0 to 1 and 1 to 0.
+</p>
+<p>
+For example: there is a variable x with value 0xAA (in binary 1010 1010), ~x will be 0x55 (in binary 0101 0101).
+</p>

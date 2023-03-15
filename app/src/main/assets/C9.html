@@ -1,0 +1,59 @@
+<html><head><meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="min.css">
+</head>
+<h1>Difference between printf and puts</h1>
+<p>In this tutorial we will learn what are the differences between printf and puts functions in c programming language?
+</p>
+<p>
+Both functions are declared in stdio.h and used to send text/character stream to output stream (that will print on the standard output device).
+</p>
+<p>
+But both are not same, their functionality, syntaxes and usages are different; basically they have two differences:
+</p>
+
+
+<ul>
+<li>printf can print the value of mixed type of variables but puts can’t print, puts has single parameter that is character array (character pointer).</li>
+<li>printf prints whatever you provide, it may be text, text + values etc without adding new line after the text while puts add one more character that is new line character (\n) just after the text/character stream.</li>
+</ul>
+
+<p>
+So basically, if we want to print the string either we can use printf or puts, but if we want to add new line after the string, we should use puts.
+</p>
+
+
+<h3 id="header-list-menu">printf</h3>
+
+<p>
+As we discussed in many posts that printf is used to print message/text/character stream along with the values of variables.
+</p>
+<h3 id="header-list-menu">puts</h3>
+
+<p>
+puts is used to print the string (character stream) on the output stream (that will print on the standard output device) with additional new line character (\n).
+</p>
+<b> Here is the synta</b>
+<p> int puts(const char *text);</p>
+<b> Here</b>
+<ul>
+<li>text is the character stream to be printed, it may be direct value within the double quotes or a character array variable.</li>
+<li>Return type int - puts returns total number of printed characters excluding new line character (which adds automatically).</li>
+</ul>
+
+
+<b> Here are three variations of puts</b>
+
+<textarea readonly style="height:30px";>
+puts("Hello world!");
+</textarea>
+
+<textarea readonly style="height:40px";>
+char msg[]="Hello world!";
+puts(msg);
+</textarea>
+
+<textarea readonly style="height:30px";>
+const char *msg="Hello world!";
+puts(msg);
+</textarea>
+

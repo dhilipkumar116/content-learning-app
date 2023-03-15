@@ -1,0 +1,56 @@
+<html><head><meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="min.css">
+</head>
+<h1>Difference between printf and sprintf</h1>
+<p>Here we are going to learn about printf and sprintf statements in c programming language, when and how they are used? What are their parameters and what they return?
+</p>
+
+
+<h3 id="header-list-menu">printf</h3>
+
+<p>
+printf is used to print text (string/ character stream) or/and values on standard output device.
+</p>
+<b>Here is the syntax</b>
+
+<p> int printf(const char *format, ...);</p>
+<b>Here</b>
+
+<ul>
+<li>format provides the format of the text string which is going to print on the output device with the help of format specifiers like %s, %d, %f etc.</li>
+<li>... provides the list of arguments to be print.</li>
+<li>Return type int returns total number of printed characters on the output screen.</li>
+</ul>
+
+
+<h3 id="header-list-menu">A simple program to print "Hello"</h3>
+<textarea readonly style="height:150px";>
+#include <stdio.h>
+
+int main()
+{
+    printf("Hello");
+
+    return 0;
+}
+</textarea>
+<h3 id="header-list-menu">Output</h3>
+<textarea readonly style="height:30px";>
+Hello
+</textarea>
+<h3 id="header-list-menu">Program to print Name and Age</h3>
+
+<textarea readonly style="height:150px";>
+#include <stdio.h>
+
+int main()
+{
+    printf("My name is %s, I am %d years old\n","Paresh",23);
+
+    return 0;
+}
+</textarea>
+<h3 id="header-list-menu">Output</h3>
+<textarea readonly style="height:30px";>
+My name is Paresh, I am 23 years old
+</textarea>

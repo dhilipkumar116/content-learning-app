@@ -1,0 +1,35 @@
+<html><head><meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="min.css">
+</head>
+<h1>Precedence and associativity</h1>
+<p>While, writing programs in C, we mostly perform calculations and arithmetic operations using the C arithmetic operators. Even the basic addition program in C involves the use of arithmetic addition operator `+` to perform addition of two integers or float value.
+</p>
+<p>
+For example, the asterisk * indicates multiplication and the forward slash (/) denotes the division operator. Unlike algebra, in C, to multiply a times b, the multiplication must be explicitly denoted by using the * operator, as in a * b. The arithmetic operators are all binary operators. For example, the expression 3 + 7 contains the binary operator + and the operands 3 and 7, or - operator subtracts the second operand from the first.
+</p>
+<p>
+C also has special % modulus operator, which returns the remainder of two numbers. It can be used cleverly in programs such as finding a number whether it is even or odd.
+</p>
+<p>
+But, when operators are used in a composite expression, then the values might not be what you expect. Consider this example,
+</p>
+<p>
+a = 10 + 2 * 5 - 6 / 2
+</p>
+<p>
+If you think its 27, then you are tricked by C. All mathematical operations form a hierarchy based on priority which is shown below. In the above calculation the multiplication and division parts will be evaluated first and then the addition and subtraction parts. 
+</p>
+
+<p style="text-align: justify;"><img class="responsive-image alignnone size-full wp-image-16640" src="1.jpg" alt="" width="475" height="257" /></p>
+
+<p>
+According to this table, from the left to right, the operator with higher precedence will get evaluated first. If two operators have same precedence, then the one which occurs first from left to right will get evaluated first. The parentheses have highest priority, which means expressions inside them are evaluated first. Parentheses can contain sub parentheses and the rule follows same for ever operator.
+</p>
+<b>Here are a few examples to help you better,</b>
+
+</br>
+<textarea readonly style="height:70px";>
+a = 16 + (2 * 5) - (6 / 2) // Answer: 23
+a = (10 + 2) * (8 - 6) / 2 // Answer: 12
+a = 15 + (4 * 12 / 6) - 3 // Answer: 20 
+</textarea>

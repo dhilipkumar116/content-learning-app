@@ -1,0 +1,56 @@
+<html><head><meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="min.css">
+</head>
+<h1>‘unsigned char’ for memory optimization</h1>
+<p>Developers generally use int to store integer values, without thinking about data range, if the data range is less, we should use unsigned char.
+</p>
+
+<h3 id="header-list-menu">unsigned char</h3>
+<p>
+A type of char data type, unsigned char can store values between 0 to 255, so we can use unsigned char instead of short or int.
+</p>
+<h3 id="header-list-menu">Here is an example:</h3>
+
+
+<textarea readonly style="height:250px";>
+#include <stdio.h>
+int main()
+{
+	unsigned char value=0;
+	
+	printf("Value is: %d\n",value);
+	
+	value=50;
+	printf("Value is: %d\n",value);
+	
+	value=255;
+	printf("Value is: %d\n",value);
+	
+	return 0;	
+}
+
+</textarea>
+
+<h3 id="header-list-menu">Output</h3>
+<textarea readonly style="height:250px";>
+Value is: 0 
+Value is: 50
+Value is: 255
+</textarea>
+<p>What will happen, if the value is greater than 255?
+</p>
+
+<textarea readonly style="height:100px";>
+int main()
+{
+	unsigned char value=300;
+	printf("Value is: %d\n",value);
+	return 0;
+}
+</textarea>
+
+<h3 id="header-list-menu">Output</h3>
+<textarea readonly style="height:30px";>
+value is: 44
+</textarea>
+

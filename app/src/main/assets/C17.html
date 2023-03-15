@@ -1,0 +1,39 @@
+<html><head><meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="min.css">
+</head>
+<h1>Introduction to storage classes</h1>
+<h3 id="header-list-menu">Storage Classes</h3>
+
+
+<p>The storage classes are generally used to specify the different features of variable/function. The features govern various aspects of the variables or function which include the scope, visibility, and lifetime, which in turn assists us in knowing the functionality of the particular variable during the runtime of the program.
+</p>
+
+<h3 id="header-list-menu">Types of Storage Classes in C</h3>
+<p>
+There are basically 4 types of storage classes in C,
+</p>
+
+
+<h3 id="header-list-menu">1) auto</h3>
+<p>
+Any variable which is declared inside a function or block is by default assigned an auto class also called automatic variable. So it is not much necessary to separately call a variable as auto. The auto variables are only accessible within the block or function in which they are declared. In case you want o access these variables outside their scope or block, this can be done by using the concept of pointers, by pointing to the address of the variable which is to be accessed.
+</p>
+
+<h3 id="header-list-menu">2) extern</h3>
+<p>
+Any variable which is declared outside a function is defined as an extern variable. The variable should not be defined in the same block, or else it won't be regarded as an extern variable. It is also referred to as global variable. If a variable with the same name as that of an extern variable is declared inside a block or function, then the local variable will get more preference as compared to the extern variable. As a result, extern variable will be hidden in that case.
+</p>
+
+<h3 id="header-list-menu">3) static</h3>
+<p>
+The main property of static variables is that they can retain their values even when they are used out of their scope. So, they are able to store the value of their last use in their scope. The static variables are initialized only once and they exist throughout the program execution. Therefore, memory is also allocated only once as there is no need to redeclare the variables. The scope of these Local Static variables are local to the block or function in which they are declared. On the other hand, the scope of Global Static variables is throughout the program execution. If a static variable is not explicitly initialized, it is assigned value 0 by the compiler.
+</p>
+
+<h3 id="header-list-menu">4) registers</h3>
+<p>
+The register storage classes have the same functionality and scope as that of auto variables, but the only difference is caused by the way the registers are stored. The compiler stores these variables in the high-speed register memory of the microprocessor. The variables which are very frequently used by the compiler are stored in register memory, as the register have very limited memory. If the register memory exceeds then the compiler automatically converts the register variable to auto variable. We can not obtain the address of register variable using pointers. The scope and lifetime of register variables are identical to the auto variables.
+</p>
+<h3 id="header-list-menu">Syntax:</h3>
+<textarea readonly style="height:30px";>
+storage_class var_data_type var_name;
+</textarea>

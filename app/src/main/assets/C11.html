@@ -1,0 +1,40 @@
+<html><head><meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="min.css">
+</head>
+<h1>Input octal value using scanf()</h1>
+<p>Here, we have to declare an unsigned int variable and input a value which should be entered in octal format.
+</p>
+<p>To input and print a value in octal format - we use "%o" format specifier.</p>
+
+<h3 id="header-list-menu">Program</h3>
+
+<textarea readonly style="height:300px";>
+#include <stdio.h>
+
+int main(void)
+{
+	unsigned int value;
+
+	printf("Input octal value: ");
+	scanf("%o", &value);
+	printf("value in octal format: %o\n", value);
+	printf("value in decimal format: %d\n", value);
+
+	//testing with invalid value
+	printf("Input octal value: ");
+	scanf("%o", &value);
+	printf("value in octal format: %o\n", value);
+	printf("value in decimal format: %d\n", value);
+
+	return 0;
+}
+</textarea>
+<h3 id="header-list-menu">Output</h3>
+<textarea style="height:130px";>
+Input octal value: 127
+value in octal format: 127
+value in decimal format: 87
+Input octal value: 1278
+value in octal format: 127
+value in decimal format: 87
+</textarea>

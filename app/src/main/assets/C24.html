@@ -1,0 +1,126 @@
+<html><head><meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="min.css">
+</head>
+<h1>Logical OR (||) operator</h1>
+<p>Logical operators work with the test conditions and return the result based on the condition's results, these can also be used to validate multiple conditions together.
+</p>
+<p>In C programming language, there are three logical operators Logical AND (&&), Logical OR (||) and Logician NOT (!).
+</p>
+
+<h3 id="header-list-menu">Logical OR (||) operator in C</h3>
+<p>Logical OR is denoted by double pipe characters (||), it is used to check the combinations of more than one conditions; it is a binary operator – which requires two operands.
+</p>
+<p>If any of the operand's values is non-zero (true), Logical OR (||) operator returns 1 ("true"), it returns 0 ("false") if all operand's values are 0 (false).
+</p>
+
+<h3 id="header-list-menu">C examples of Logical OR (||) operator</h3>
+
+<p>
+Example 1: Take a number and apply some of the conditions and print the result of expression containing logical OR operator.
+</p>
+
+<textarea readonly style="height:120px";>
+// C program to demonstrate example of 
+// Logical OR (||) operator 
+
+#include <stdio.h>
+
+int main()
+{
+    int num =10;
+    
+    //printing result with OR (||) operator
+    printf("%d\n",(num==10 || num>=5));
+    printf("%d\n",(num>=5  || num<=50));
+    printf("%d\n",(num!=10 || num>=5));
+    printf("%d\n",(num>=20 || num!=10));
+    
+    return 0;
+}
+</textarea>
+</br>
+<b>Output</b>
+1</br>
+1</br>
+1</br>
+0</br>
+<b>Example 2: Input gender in single character and print full gender (Ex: if input is 'M' or 'm' – it should print "Male").</b>
+</br>
+
+<textarea readonly style="height:150px";>
+#include <stdio.h>
+
+int main()
+{
+    char gender;
+    
+    //input gender
+    printf("Enter gender (m/M/f/F): ");
+    scanf("%c", &gender);
+    
+    //check the condition and print gender
+    if(gender=='m' || gender=='M')
+        printf("Gender is Male");
+    else if(gender=='f' || gender=='F')
+        printf("Gender is Female");
+    else
+        printf("Unspecified gender");
+        
+    return 0;
+}
+</textarea>
+
+<b>Output</b>
+</br>
+Enter gender (m/M/f/F): m</br>
+Gender is Male</br>
+</br>
+Second run:</br>
+Enter gender (m/M/f/F): F</br>
+Gender is Female </br>
+</br>
+Third run:</br>
+Enter gender (m/M/f/F): x</br>
+Unspecified gender
+</br>
+
+<h3 id="header-list-menu">Example 3: Input an integer number and check whether it is divisible by 9 or 7.
+</h3>
+
+<textarea readonly style="height:300px";>
+#include <stdio.h>
+
+int main()
+{
+    int num;
+    
+    //input number
+    printf("Enter an integer number: ");
+    scanf("%d", &num);
+    
+    //check the condition
+    if(num%9==0 || num%7==0)
+        printf("%d is divisible by 9 or 7\n",num);
+    else
+        printf("%d is not divisible by 9 or 7\n",num);
+        
+    return 0;
+}
+</textarea>
+
+<b>Output</b>
+</br>
+First run:</br>
+Enter an integer number: 27</br>
+27 is divisible by 9 or 7</br>
+</br>
+Second run:</br>
+Enter an integer number: 49</br>
+49 is divisible by 9 or 7</br>
+</br>
+Third run:</br>
+Enter an integer number: 25</br>
+25 is not divisible by 9 or 7</br>
+</br>
+
+

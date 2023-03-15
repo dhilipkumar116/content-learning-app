@@ -1,0 +1,159 @@
+<html><head><meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="min.css">
+</head>
+<h1>Storage classes</h1>
+<h3 id="header-list-menu">A variable's storage class tells us the following,</h3>
+<ul>
+<li>Where the variables would be stored?</li>
+<li>What will be the initial of the variable, if the initial value is not specifically assigned? (i.e. the default initial value).</li>
+<li>What is the scope of the variables, i.e. in which part of the program of the functions the value of the variable would be available?</li>
+<li>What is the life of the variable, i.e. how long the variable exists?</li>
+
+</ul>
+
+<h3 id="header-list-menu">Types of storage classes in C</h3>
+<p>
+There are four classes in C programming language,
+</p>
+<ul>
+<li>Automatic storage classes</li>
+<li>Register storage classes</li>
+<li>Static storage classes</li>
+<li>External storage classes</li>
+</ul>
+
+
+<h3 id="header-list-menu">1) Automatic storage classes</h3>
+<p>
+The keyword auto is used to declare variable of automatic storage class. (keyword auto is optional).
+</p>
+<b>Syntax</b>
+<textarea style="height:50px";>
+auto int a;
+int a;
+</textarea>
+<b>Example :</b> <p>To display the default values</p>
+<textarea readonly style="height:150px";>
+#include <stdio.h>
+
+int main ()
+{
+	auto int i,j;
+	
+	printf("\n%d %d",i,j);
+	
+	return 0;
+}
+</textarea>
+
+<h3 id="header-list-menu">2) Register storage classes</h3>
+<p>
+The keyword register is used to declare a variable of the register storage class.
+</p>
+<b>Syntax</b>
+<textarea readonly style="height:30px";>
+register int a;
+</textarea>
+<b>Example :</b>
+<textarea readonly style="height:150px";>
+#include <stdio.h>
+
+int main()
+{
+	register int i;
+
+	for(i=1;i<=100;i++);
+		printf("%d",i);
+
+	return 0;
+}
+</textarea>
+<b>Output</b>
+<p>101</p>
+
+
+<h3 id="header-list-menu">3) Static storage classes</h3>
+<p>
+The keyword static is used to declare variables of static storage class.
+</p>
+<b>Syntax</b>
+<textarea readonly style="height:30px";>
+static int i;
+</textarea>
+<b> Example</b>
+<textarea readonly style="height:150px";>
+#include <stdio.h>
+
+void  abc()
+{
+	static int a=10;
+	printf("%d\n",a);
+	a=a+10;
+}
+
+int main()
+{
+	abc();
+	abc();
+	abc();
+}
+</textarea>
+<b> Output</b>
+<textarea readonly style="height:80px";>
+10
+    20
+    30
+</textarea>
+
+
+<h3 id="header-list-menu">4) External storage classes</h3>
+<p>
+The keyword extern is used to declare the variables of external storage class.
+</p>
+<p>
+In this the variable declared without keyword but it should be defined above the function(outside).
+</p>
+<b>Syntax</b>
+<textarea readonly style="height:30px";>
+extern int i;
+</textarea>
+<b> Example</b>
+<textarea readonly style="height:250px";>
+#include <stdio.h>
+
+/*Global variable*/
+int a=10;   
+
+void abc()
+{
+	printf("%d\n",a);
+	a=a+10;
+}
+
+int main()
+{
+	a=a+5;
+	printf("%d\n",a);
+ 
+	a=a+20;
+	abc();
+	printf("%d\n",a);
+	
+	abc();
+	a=a+20;
+	
+	abc();
+	printf("%d\n",a);
+	
+	return 0;
+}
+</textarea>
+<b> Output</b>
+<textarea readonly style="height:120px";>
+    15
+    35
+    45
+    45
+    75
+    85
+</textarea>

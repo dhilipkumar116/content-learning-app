@@ -1,0 +1,118 @@
+<html><head><meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="min.css">
+</head>
+<h1>Bitwise Operators</h1>
+
+<h3 id="header-list-menu">1) & (bitwise AND)</h3>
+<p>It does AND on every bit of two numbers. The result of AND is 1 only if both bits are 1.
+</p>
+<b>Example</b>
+
+<textarea readonly style="height:150px";>
+ 4 & 7
+    4 → 00000100
+    7 → 00000111
+    Doing AND for each bit
+    From LSB:
+    0 & 1= 0 (LSB of output)
+    0 & 1= 0
+    1 & 1= 1
+    0 & 0 =0
+    0 & 0 =0
+    0 & 0 =0
+    0 & 0 =0
+    0 & 0 =0
+
+    Thus output:
+    00000100 → 4
+    4 & 7 =4
+</textarea>
+</br>
+<h3 id="header-list-menu">2) | (bitwise OR)</h3>
+<p>It takes two numbers as operands and does OR on every bit of two numbers. The result of OR is 1 any of the two bits is 1.
+</p>
+<b>Example</b>
+
+<textarea readonly style="height:150px";>
+ 4 | 7
+    4 → 00000100
+    7 → 00000111
+    Doing OR for each bit
+    From LSB:
+    0 | 1 =1 (LSB of output)
+    0 | 1 =1
+    1 | 1 =1
+    0 | 0 =0
+    0 | 0 =0
+    0 | 0 =0
+    0 | 0 =0
+    0 | 0 =0
+
+    Thus output:
+    00000111 → 7
+    4 | 7 =7
+</textarea>
+
+<h3 id="header-list-menu">3) ^ (bitwise XOR)</h3>
+<p>It does XOR on every bit of two numbers. The result of XOR is 1 if the two bits are different.
+</p>
+<b>Example</b>
+
+<textarea readonly style="height:150px";>
+ 4 ^ 7
+    4 → 00000100
+    7 → 00000111
+    Doing XOR for each bit
+    From LSB:
+    0 ^ 1 =1 (LSB of output)
+    0 ^ 1 =1
+    1 ^ 1 =0
+    0 ^ 0 =0
+    0 ^ 0 =0
+    0 ^ 0 =0
+    0 ^ 0 =0
+    0 ^ 0 =0
+
+    Thus output:
+    00000011 → 3
+    4 ^ 7 =3
+</textarea>
+
+<h3 id="header-list-menu">4) << (left shift)</h3>
+<p>It takes two operands, left shifts the bits of the first operand, the second operand decides the number of places to shift. In every left shift all bits are shifted to left adding a logical 0 at LSB
+</p>
+<b>Example</b>
+
+<textarea readonly style="height:150px";>
+ 4<<1
+    Before 1 left shift
+    00000100
+    After 1 left shift
+    00001000 → 8
+    So 4<<1 = 8
+</textarea>
+
+<h3 id="header-list-menu">5) >> (right shift)</h3>
+<p>It takes two numbers, right shifts the bits of the first operand, the second operand decides the number of places to shift.
+</p>
+<b>Example</b>
+
+<textarea readonly style="height:150px";>
+    4>>1
+    Before 1 right shift
+    00000100
+    After 1 right shift
+    00000010 → 2
+    So 4<<1 = 2
+</textarea>
+
+<h3 id="header-list-menu">6) ~ (bitwise NOT)</h3>
+<p>It takes one operand and inverts all bits of it
+</p>
+<b>Example</b>
+
+<textarea readonly style="height:150px";>
+    ~4
+    00000100 → 11111011
+    ~4=251
+</textarea>

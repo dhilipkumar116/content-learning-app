@@ -1,0 +1,35 @@
+<html><head><meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="min.css">
+</head>
+<h1>Difference between short, short int and int data types in C programming</h1>
+<p>In this tutorial we will learn what is the difference between short, short int and int data types in c programming language?
+</p>
+
+<h3 id="header-list-menu">short or short int</h3>
+<p>
+Both data types are same, short int can also be written as short; short occupies 2 bytes in the memory.
+</p>
+
+
+<h3 id="header-list-menu">Consider this program:</h3>
+
+
+<textarea readonly style="height:250px";>
+int main()
+{
+    printf("size of short : %d\n",sizeof(short));
+    printf("size of short int : %d\n",sizeof(short int));
+    printf("size of signed short  : %d\n",sizeof(signed short));
+    printf("size of signed short int  : %d\n",sizeof(signed short int));
+    
+    return 0;
+}
+</textarea>
+
+<h3 id="header-list-menu">Output</h3>
+<textarea readonly style="height:80px";>
+size of short : 2 
+size of short int : 2 
+size of signed short: 2 
+size of signed short int: 2
+</textarea>

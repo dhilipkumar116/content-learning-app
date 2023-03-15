@@ -1,0 +1,41 @@
+<html><head><meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="min.css">
+</head>
+<h1>printf() statement within another printf()</h1>
+<p>A printf() function is a standard library function, that is used to print the text and value on the standard output screen. Here, we will evaluate the expression – where a printf() is used within another printf() statement.
+</p>
+<h3 id="header-list-menu">Consider the statement:</h3>
+
+<textarea readonly style="height:30px";>
+printf ("%d", printf ("Hello"));
+</textarea>
+
+
+<h3 id="header-list-menu">Note these points:</h3>
+
+<ul>
+<li>printf() prints the text as well as the value of the variable, constant etc.</li>
+<li>printf() returns an integer value that is the total number of printed characters including spaces, carriage return, line feed etc.</li>
+</ul>
+
+<h3 id="header-list-menu">Evaluation of the above written statement:</h3>
+<p> printf() function evaluates from right to left, thus printf("Hello") will be evaluated first, that will print "Hello" and printf("Hello") will return the total number of printed character that is 5 and then the output of this printf("Hello") after printing "Hello" will be 5.</p>
+
+<p>Thus, finally, the output of the above-written statement will be: "Hello5".</p>
+
+<h3 id="header-list-menu">Example:
+</h3>
+
+<textarea readonly style="height:150px";>
+#include <stdio.h>
+
+int main(void)
+{
+	printf("%d", printf ("Hello"));
+	return 0;
+}
+</textarea>
+<p> Output </p>
+<textarea readonly style="height:40px";>
+Hello5
+</textarea>

@@ -1,0 +1,126 @@
+<html><head><meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="min.css">
+</head>
+<h1>Equality Operators in C</h1>
+<p>Logical operators work with the test conditions and return the result based on the condition's results, these can also be used to validate multiple conditions together.</p>
+<p>In C programming language, there are three logical operators Logical AND (&&), Logical OR (||) and Logician NOT (!).
+</p>
+
+<h3 id="header-list-menu">Logical AND (&&) operator in C</h3>
+<p>Logical AND is denoted by double ampersand characters (&&), it is used to check the combinations of more than one conditions; it is a binary operator – which requires two operands.
+</p>
+<p>If both of the operand's values is non-zero (true), Logical AND (&&) operator returns 1 (true), else it returns 0 (false).
+</p>
+
+<h3 id="header-list-menu">C examples of Logical AND (&&) operator</h3>
+
+<p>
+Example 1: Take a number and apply some of the conditions and print the result of expression containing logical AND operator.
+</p>
+
+<textarea readonly style="height:120px";>
+// C program to demonstrate example of 
+// Logical AND (&&) operator 
+
+#include <stdio.h>
+
+int main()
+{
+    int num =10;
+    
+    //printing result with AND (&&) operator
+    printf("%d\n",(num==10 && num>=5));
+    printf("%d\n",(num>=5  && num<=50));
+    printf("%d\n",(num!=10 && num>=5));
+    printf("%d\n",(num>=20 && num<=50));
+    
+    return 0;
+}
+
+</textarea>
+<b>Example 2: Input age and check it is teenage or not.</b>
+</br>
+
+<textarea readonly style="height:150px";>
+// C program to demonstrate example of 
+// Logical AND (&&) operator 
+// Input age and check it is teenage or not.
+
+#include <stdio.h>
+
+int main()
+{
+    int age;
+    
+    //input age
+    printf("Enter age: ");
+    scanf("%d", &age);
+    
+    //check teenage or not
+    if(age>=13 && age<=19)
+        printf("%d is a teenage value\n", age);
+    else
+        printf("%d is not a teenage value\n", age);
+    
+    return 0;
+}
+
+</textarea>
+<b>Output</b>
+</br>
+First run:
+</br>
+Enter age: 18
+</br>
+18 is a teenage value
+</br>
+Second run:</br>
+Enter age: 12</br>
+12 is not a teenage value
+</br>
+
+<h3 id="header-list-menu">Example 3: Input username and password and validate the values with predefined values of username and password.</h3>
+
+<textarea readonly style="height:350px";>
+#include <stdio.h>
+#include <string.h>
+
+// define a fixed value for USERNAME and PASSWORD
+#define USERNAME "admin"
+#define PASSWORD "admin@123"
+
+int main()
+{
+    char un[50], pass[50];
+    
+    //input USERNAME and PASSWORD
+    printf("Enter username: ");
+    scanf("%s", un);
+    printf("Enter password: ");
+    scanf("%s", pass);
+    
+    //validate username and password
+    if(strcmp(USERNAME,un)==0 && strcmp(PASSWORD, pass)==0)
+        printf("Input credentials are correct\n");
+    else
+        printf("Input credentials are not correct\n");
+    
+    return 0;
+}
+
+</textarea>
+
+<b>Output</b>
+</br>
+First run:</br>
+Enter username: admin</br>
+Enter password: admin@123</br>
+Input credentials are correct</br>
+</br>
+Second run:</br>
+Enter username: admin</br>
+Enter password: hello@123</br>
+Input credentials are not correct
+</br>
+
+
